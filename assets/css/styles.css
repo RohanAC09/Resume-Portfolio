@@ -7,7 +7,7 @@
   --accent-soft: #fac1ae;
   --green: #1f5d4a;
   --line: rgba(23, 24, 22, 0.18);
-  --muted: #66675f;
+  --muted: #4c4d48;
   --header-height: 74px;
   --shadow: 0 18px 60px rgba(31, 31, 25, 0.12);
 }
@@ -91,7 +91,7 @@ button {
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 .nav__link {
   font-family: "DM Mono", monospace;
@@ -714,8 +714,9 @@ button {
 .skills-option {
   margin-top: 70px;
   display: grid;
-  grid-template-columns: 155px 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
+  /* gap: 40px; */
+  padding: 0px 50px;
 }
 .option-label span {
   display: inline-block;
@@ -736,7 +737,7 @@ button {
 }
 .domain-card {
   position: relative;
-  min-height: 260px;
+  min-height: 200px;
   padding: 34px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -744,19 +745,25 @@ button {
     background 0.25s,
     color 0.25s;
 }
-.domain-card > i {
+.domain-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.domain-card-heading > i {
   font-size: 2rem;
   color: var(--accent);
 }
-.domain-card h3 {
-  margin: 35px 0 12px;
+.domain-card-heading h3 {
+  padding-left: 15px;
+  margin: 12px 0 12px;
   font-size: 1.2rem;
 }
-.domain-card p {
+.domain-card-heading p {
   max-width: 350px;
   color: var(--muted);
 }
-.domain-card > span {
+/* .domain-card > span {
   position: absolute;
   top: 26px;
   right: 26px;
@@ -764,7 +771,7 @@ button {
   font:
     2rem "DM Mono",
     monospace;
-}
+} */
 .domain-card:hover {
   background: var(--ink);
   color: var(--white);
@@ -772,9 +779,9 @@ button {
 .domain-card:hover p {
   color: #b8b9b2;
 }
-.domain-card:hover > span {
+/* .domain-card:hover > span {
   color: #454641;
-}
+} */
 .skills-option--stack {
   padding-top: 80px;
   border-top: 1px solid var(--line);
@@ -1036,7 +1043,6 @@ button {
     margin-bottom: 10px;
   }
   .skills-option {
-    grid-template-columns: 120px 1fr;
     gap: 25px;
   }
   .domain-card {
@@ -1193,14 +1199,11 @@ button {
   .education__item > p:not(.education__year) {
     grid-column: 1;
   }
-  .skills-option {
-    grid-template-columns: 1fr;
-  }
   .domain-grid {
     grid-template-columns: 1fr;
   }
   .domain-card {
-    min-height: 225px;
+    min-height: 200px;
   }
   .skills-option--stack {
     padding-top: 60px;
