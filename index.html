@@ -66,53 +66,45 @@
         <div class="hero__texture" aria-hidden="true"></div>
         <div class="hero__container container">
           <div class="hero__content reveal">
-            <p class="eyebrow">
+            <!-- <p class="eyebrow">
               <span class="status-dot"></span> Available for ambitious
               engineering work
-            </p>
+            </p> -->
             <h1>Rohan<br />Chinchkar<span>.</span></h1>
             <div class="hero__role" aria-live="polite">
-              <span class="hero__prompt">&gt;</span
-              ><span id="typed-text">I'm a software engineer</span
-              ><span class="typing-cursor" aria-hidden="true"></span>
+              <span class="hero__prompt">&gt;</span>
+              <span id="typed-text"></span>
+              <span class="typing-cursor" aria-hidden="true"></span>
             </div>
             <p class="hero__description">
-              I build dependable, high-scale products from backend architecture
-              to polished interfaces, with a focus on distributed systems and
+              Building high-scale products from backend architecture
+              to polished UIs, with a focus on distributed systems and
               thoughtful engineering.
             </p>
             <div class="hero__actions">
-              <a href="#projects" class="button"
-                >View selected work
-                <i class="uil uil-arrow-down-right" aria-hidden="true"></i
-              ></a>
-              <a href="mailto:chinchkarrohan97@gmail.com" class="text-link"
-                >Email me
-                <i class="uil uil-arrow-up-right" aria-hidden="true"></i
-              ></a>
+              <a href="#experience" class="button">
+                Explore complete profile
+                <i class="uil uil-arrow-down-right" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:chinchkarrohan97@gmail.com" class="text-link">
+                Email me
+                <i class="uil uil-arrow-up-right" aria-hidden="true"></i>
+              </a>
             </div>
             <div class="hero__socials" aria-label="Social profiles">
-              <a
-                href="https://www.linkedin.com/in/rohanchinchkar/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                ><i class="uil uil-linkedin-alt" aria-hidden="true"></i
-              ></a>
-              <a
-                href="https://github.com/RohanAC09/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                ><i class="uil uil-github-alt" aria-hidden="true"></i
-              ></a>
-              <a
-                href="https://leetcode.com/u/rohan_rc09/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LeetCode"
-                ><i class="uil uil-brackets-curly" aria-hidden="true"></i
-              ></a>
+              <a href="https://www.linkedin.com/in/rohanchinchkar/"
+                target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
+                <span class="tooltip-text">LinkedIn</span>
+              </a>
+              <a href="https://github.com/RohanAC09/" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <i class="uil uil-github-alt" aria-hidden="true"></i>
+                <span class="tooltip-text">GitHub</span>
+              </a>
+              <a href="https://leetcode.com/u/rohan_rc09/" target="_blank" rel="noreferrer" aria-label="LeetCode">
+                <i class="uil uil-brackets-curly" aria-hidden="true"></i>
+                <span class="tooltip-text">LeetCode</span>
+              </a>
             </div>
           </div>
           <div class="hero__visual reveal">
@@ -123,12 +115,12 @@
                 class="hero__portrait"
               />
               <span class="portrait-tag portrait-tag--top">Pune, India</span>
-              <span class="portrait-tag portrait-tag--bottom"
-                >04+ years building</span
-              >
+              <div class="portrait-tag portrait-tag--bottom">
+                <span id="experience-year"></span><span>+ years building</span>
+              </div>
             </div>
             <p class="hero__code" aria-hidden="true">
-              build(); learn(); repeat();
+              learn(); build(); repeat();
             </p>
           </div>
         </div>
@@ -138,22 +130,22 @@
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-index">01 / EXPERIENCE</p>
-            <h2>Engineering work that<br /><em>holds up.</em></h2>
+            <h2>Work that <em>holds up.</em></h2>
           </div>
           <div class="experience__list">
             <article class="experience__item reveal">
               <p class="experience__period">2022 - PRESENT</p>
               <div>
                 <h3>Software Engineer</h3>
-                <p class="experience__company">LTIMindtree · Pune</p>
+                <p class="experience__company">LTM</p> 
+                <!-- · Pune -->
               </div>
               <p class="experience__description">
-                Designing scalable microservices and event-driven workflows with
-                Java, Spring Boot, Kafka, Redis, and React. Building
-                fault-tolerant services, improving system observability, and
-                shipping features across the full product stack.
+                Developed and enhanced microservices using <span>Java</span> and <span>React.js</span> for ETL/ELT products handling <span>150M+</span> records/week.
+                Improved system performance and reliability by <span>~20%</span> through optimized microservice architecture and efficient event-driven workflows.
+                Reduced Snowflake monitoring overhead by <span>94%</span> by implementing adaptive backoff strategy on watcher threads. Improved observability and reduced production pod overhead processing <span>30k+</span> jobs/month.
+                Conducted code reviews to ensure high quality standards and mentored junior developers for efficiency and skill development.
               </p>
-              <span class="experience__number">01</span>
             </article>
             <article class="experience__item reveal">
               <p class="experience__period">2020 - 2022</p>
@@ -162,11 +154,9 @@
                 <p class="experience__company">IIT Guwahati</p>
               </div>
               <p class="experience__description">
-                Supported undergraduate labs and coursework, mentored students
-                through complex technical concepts, and evaluated practical
-                assignments with clear, actionable feedback.
+                Mentored undergraduate students through complex technical concepts and evaluated the assessments.
+                Assisted in the progress of course-work and ensured smooth lab operations.
               </p>
-              <span class="experience__number">02</span>
             </article>
             <article class="experience__item reveal">
               <p class="experience__period">2018 - 2019</p>
@@ -175,11 +165,9 @@
                 <p class="experience__company">Greaves Cotton Limited</p>
               </div>
               <p class="experience__description">
-                Worked with an engineering team on an industry project,
-                translating operational requirements into a practical technical
-                solution and documenting outcomes for stakeholders.
+                Worked in a team on industry project, translating operational requirements into a practical technical
+                solution.
               </p>
-              <span class="experience__number">03</span>
             </article>
           </div>
         </div>
@@ -189,8 +177,8 @@
         <div class="container">
           <div class="projects__heading reveal">
             <div class="section-heading section-heading--compact">
-              <p class="section-index">02 / SELECTED PROJECTS</p>
-              <h2>Built with intent.</h2>
+              <p class="section-index">02 / PROJECTS</p>
+              <h2>Built with <em>intent.</em></h2>
             </div>
             <div class="project-controls" aria-label="Project navigation">
               <button
@@ -579,15 +567,16 @@
 
     <footer class="footer">
       <div class="container footer__content">
-        <a href="#home" class="nav__logo">RC<span>.</span></a>
+        <p></p>
         <p>
           Designed & built by Rohan Chinchkar · <span id="current-year"></span>
         </p>
-        <a href="#home" class="footer__top" aria-label="Back to top"
-          ><i class="uil uil-arrow-up" aria-hidden="true"></i
-        ></a>
+        <a href="#home" class="footer__top" aria-label="Back to top">
+          <i class="uil uil-arrow-up" aria-hidden="true"></i>
+        </a>
       </div>
     </footer>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
