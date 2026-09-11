@@ -3,10 +3,10 @@ const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
 const navLinks = document.querySelectorAll('.nav__link');
 
-function setMenu(open) {
-    navMenu.classList.toggle('show-menu', open);
-    document.body.classList.toggle('menu-open', open);
-    navToggle.setAttribute('aria-expanded', String(open));
+function setMenu(isOpen) {
+    navMenu.classList.toggle('show-menu', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
 }
 
 navToggle.addEventListener('click', () => setMenu(true));
@@ -14,15 +14,14 @@ navClose.addEventListener('click', () => setMenu(false));
 navLinks.forEach((link) => link.addEventListener('click', () => setMenu(false)));
 
 const roles = [
-    "I'm a software engineer",
     "I'm a full stack developer",
     "I'm a badminton player",
     "I'm a photographer"
 ];
 const typedText = document.getElementById('typed-text');
 let roleIndex = 0;
-let characterIndex = roles[0].length;
-let deleting = true;
+let characterIndex = 0;
+let deleting = false;
 
 function typeRole() {
     const role = roles[roleIndex];
@@ -30,19 +29,19 @@ function typeRole() {
 
     if (!deleting && characterIndex === role.length) {
         deleting = true;
-        window.setTimeout(typeRole, 1400);
+        window.setTimeout(typeRole, 1500);
         return;
     }
 
     if (deleting && characterIndex === 0) {
         deleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        window.setTimeout(typeRole, 350);
+        window.setTimeout(typeRole, 300);
         return;
     }
 
     characterIndex += deleting ? -1 : 1;
-    window.setTimeout(typeRole, deleting ? 38 : 72);
+    window.setTimeout(typeRole, deleting ? 30 : 60);
 }
 
 window.setTimeout(typeRole, 1200);
@@ -111,4 +110,5 @@ function updateHeader() {
 window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
 
+document.getElementById('experience-year').textContent = '0' + (new Date().getFullYear() - 2022);
 document.getElementById('current-year').textContent = new Date().getFullYear();
