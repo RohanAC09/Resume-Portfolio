@@ -46,43 +46,43 @@ function typeRole() {
 
 window.setTimeout(typeRole, 1200);
 
-const projectTrack = document.getElementById('project-track');
-const projectViewport = document.getElementById('project-viewport');
-const projectCards = [...projectTrack.children];
-const previousButton = document.getElementById('project-prev');
-const nextButton = document.getElementById('project-next');
-const progress = document.getElementById('project-progress');
-let projectIndex = 0;
+// const projectTrack = document.getElementById('project-track');
+// const projectViewport = document.getElementById('project-viewport');
+// const projectCards = [...projectTrack.children];
+// const previousButton = document.getElementById('project-prev');
+// const nextButton = document.getElementById('project-next');
+// const progress = document.getElementById('project-progress');
+// let projectIndex = 0;
 
-function updateProjects() {
-    const gap = parseFloat(getComputedStyle(projectTrack).gap) || 0;
-    const cardWidth = projectCards[0].getBoundingClientRect().width;
-    projectTrack.style.transform = `translateX(-${projectIndex * (cardWidth + gap)}px)`;
-    progress.style.transform = `scaleX(${(projectIndex + 1) / projectCards.length})`;
-    previousButton.disabled = projectIndex === 0;
-    nextButton.disabled = projectIndex === projectCards.length - 1;
-}
+// function updateProjects() {
+//     const gap = parseFloat(getComputedStyle(projectTrack).gap) || 0;
+//     const cardWidth = projectCards[0].getBoundingClientRect().width;
+//     projectTrack.style.transform = `translateX(-${projectIndex * (cardWidth + gap)}px)`;
+//     progress.style.transform = `scaleX(${(projectIndex + 1) / projectCards.length})`;
+//     previousButton.disabled = projectIndex === 0;
+//     nextButton.disabled = projectIndex === projectCards.length - 1;
+// }
 
-previousButton.addEventListener('click', () => {
-    projectIndex = Math.max(0, projectIndex - 1);
-    updateProjects();
-});
+// previousButton.addEventListener('click', () => {
+//     projectIndex = Math.max(0, projectIndex - 1);
+//     updateProjects();
+// });
 
-nextButton.addEventListener('click', () => {
-    projectIndex = Math.min(projectCards.length - 1, projectIndex + 1);
-    updateProjects();
-});
+// nextButton.addEventListener('click', () => {
+//     projectIndex = Math.min(projectCards.length - 1, projectIndex + 1);
+//     updateProjects();
+// });
 
-let pointerStart = 0;
-projectViewport.addEventListener('pointerdown', (event) => { pointerStart = event.clientX; });
-projectViewport.addEventListener('pointerup', (event) => {
-    const distance = event.clientX - pointerStart;
-    if (Math.abs(distance) < 45) return;
-    projectIndex = Math.max(0, Math.min(projectCards.length - 1, projectIndex + (distance < 0 ? 1 : -1)));
-    updateProjects();
-});
-window.addEventListener('resize', updateProjects);
-updateProjects();
+// let pointerStart = 0;
+// projectViewport.addEventListener('pointerdown', (event) => { pointerStart = event.clientX; });
+// projectViewport.addEventListener('pointerup', (event) => {
+//     const distance = event.clientX - pointerStart;
+//     if (Math.abs(distance) < 45) return;
+//     projectIndex = Math.max(0, Math.min(projectCards.length - 1, projectIndex + (distance < 0 ? 1 : -1)));
+//     updateProjects();
+// });
+// window.addEventListener('resize', updateProjects);
+// updateProjects();
 
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
