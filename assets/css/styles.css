@@ -173,7 +173,7 @@ button {
   box-shadow: 0 0 0 5px rgba(72, 167, 119, 0.13);
 }
 .hero h1 {
-  font-size: clamp(4.2rem, 8.2vw, 8.4rem);
+  font-size: clamp(3.2rem, 8vw, 6.4rem);
   line-height: 0.84;
   letter-spacing: 0;
   font-weight: 800;
@@ -241,6 +241,7 @@ button {
   margin-top: 42px;
 }
 .hero__socials a {
+  position: relative;
   width: 39px;
   aspect-ratio: 1;
   display: grid;
@@ -256,6 +257,30 @@ button {
   color: var(--white);
   border-color: var(--accent);
 }
+.tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 12%;
+  
+  position: absolute;
+  z-index: 1;
+  bottom: 110%; /* Places it right above the text */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the tooltip */
+  
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.hero__socials a:hover .tooltip-text {
+  visibility: visible;
+  opacity: 0.9;
+}
+
 .hero__visual {
   position: relative;
   justify-self: end;
@@ -319,6 +344,11 @@ button {
 .section-index {
   color: var(--accent);
   margin-bottom: 18px;
+  font:
+    500 1rem/1.4 "DM Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .section-heading h2,
 .contact h2 {
@@ -348,10 +378,10 @@ button {
 .experience__item {
   position: relative;
   display: grid;
-  grid-template-columns: 150px 270px 1fr 45px;
-  gap: 35px;
+  grid-template-columns: 150px 260px 1fr;
+  gap: 30px;
   align-items: start;
-  padding: 36px 0;
+  padding: 30px 0;
   border-top: 1px solid var(--line);
 }
 .experience__item:last-child {
@@ -376,15 +406,8 @@ button {
 .experience__description {
   color: var(--muted);
 }
-.experience__number {
-  color: var(--paper-deep);
-  font:
-    500 2.8rem/1 "DM Mono",
-    monospace;
-  transition: color 0.25s;
-}
-.experience__item:hover .experience__number {
-  color: var(--accent-soft);
+.experience__description > span {
+  font-weight: 700;
 }
 
 .projects {
@@ -945,6 +968,7 @@ button {
   color: var(--white);
 }
 .footer p {
+  text-align: center;
   font:
     0.7rem "DM Mono",
     monospace;
