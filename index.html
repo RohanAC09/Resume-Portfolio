@@ -1,565 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
-
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="">
-
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="./assets/css/styles.css">
-
-    <title>Rohan Chinchkar - Portfolio</title>
-</head>
-
-<body>
-    <!--==================== HEADER ====================-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Rohan Chinchkar, a software engineer building reliable full-stack products."
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Rohan Chinchkar | Software Engineer</title>
+  </head>
+  <body>
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Rohan</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Skills
-                        </a>
-                    </li>
-                    <!-- <li class="nav__item">
-                        <a href="#services" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i> Services
-                        </a>
-                    </li> -->
-                    <!-- <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Projects
-                        </a>
-                    </li> -->
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contact Me
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
-
-            <div class="nav__btns">
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-        </nav>
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="nav__logo" aria-label="Rohan Chinchkar, home"
+          >Rohan Chinchkar</a>
+        
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#experience" class="nav__link">Experience</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#education" class="nav__link">Education</a></li>
+            <li>
+              <a href="#contact" class="nav__link nav__link--contact"
+                >Let's talk</a
+              >
+            </li>
+          </ul>
+          <button
+            class="icon-button nav__close"
+            id="nav-close"
+            type="button"
+            aria-label="Close menu"
+          >
+            <i class="uil uil-times" aria-hidden="true"></i>
+          </button>
+        </div>
+        <button
+          class="icon-button nav__toggle"
+          id="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <i class="uil uil-bars" aria-hidden="true"></i>
+        </button>
+      </nav>
     </header>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/rohanchinchkar/" class="home__social-icon">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-
-                        <a href="https://github.com/RohanAC09/" class="home__social-icon">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-
-                        <a href="https://leetcode.com/u/rohan_rc09/" class="home__social-icon">
-                            <i class="uil uil-brackets-curly"></i>
-                        </a>
-                    </div>
-
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                                <image class="home__blob-img" x='-33' y='-45' href="./assets/img/rohan_front.jpg" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <div class="home__data">
-                        <h1 class="home__title">Hi, I'm Rohan</h1>
-                        <h3 class="home__subtitle">Full Stack Developer</h3>
-                        <p class="home__description">Designed robust end-to-end
-                            systems with asynchronous processing, microservices architecture
-                            using Kafka and Redis based on Spring-Boot (Java) and React
-                            (JS). Strong in system design and problem-solving (500+ Leetcode
-                            problems) with published paper on Deep Learning.</p>
-                        <!-- <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
-                        </a> -->
-                    </div>
-                </div>
-
-                <!-- <div class="home__scroll">
-                    <a href="#about" class="home__scroll-bottom button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                    </a>
-                </div> -->
+    <main>
+      <section class="hero" id="home">
+        <div class="hero__texture" aria-hidden="true"></div>
+        <div class="hero__container container">
+          <div class="hero__content reveal">
+            <p class="eyebrow">
+              <span class="status-dot"></span> Available for ambitious
+              engineering work
+            </p>
+            <h1>Rohan<br />Chinchkar<span>.</span></h1>
+            <div class="hero__role" aria-live="polite">
+              <span class="hero__prompt">&gt;</span
+              ><span id="typed-text">I'm a software engineer</span
+              ><span class="typing-cursor" aria-hidden="true"></span>
             </div>
-        </section>
-
-        <!--==================== ABOUT ====================-->
-        <!-- <section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle">My Introduction</span>
-
-            <div class="about__container container grid">
-                <img src="" alt="" class="about__img" />
-
-                <div class="about__data">
-                    <p class="about__description">Detailed introduction about myself.</p>
-
-                    <div class="about__info">
-                        <div>
-                            <span class="about__info-title">04+</span>
-                            <span class="about__info-name">Years <br> experience</span>
-                        </div>
-
-                        <div>
-                            <span class="about__info-title">20+</span>
-                            <span class="about__info-name">Completed <br> projects</span>
-                        </div>
-
-                        <div>
-                            <span class="about__info-title">05+</span>
-                            <span class="about__info-name">Companies <br> worked</span>
-                        </div>
-                    </div>
-
-                    <div class="about__buttons">
-                        <a download="" href="./assets/pdf/Rohan_Chinchkar_2026_001_FullStack.pdf"
-                            class="button button--flex">
-                            Download CV <i class="uil uil-download-alt button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-
+            <p class="hero__description">
+              I build dependable, high-scale products from backend architecture
+              to polished interfaces, with a focus on distributed systems and
+              thoughtful engineering.
+            </p>
+            <div class="hero__actions">
+              <a href="#projects" class="button"
+                >View selected work
+                <i class="uil uil-arrow-down-right" aria-hidden="true"></i
+              ></a>
+              <a href="mailto:chinchkarrohan97@gmail.com" class="text-link"
+                >Email me
+                <i class="uil uil-arrow-up-right" aria-hidden="true"></i
+              ></a>
             </div>
-        </section> -->
-
-        <!--==================== SKILLS ====================-->
-        <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle"></span>
-
-            <div class="skills__container container grid">
-                <div class="skills__flex">
-                    <!--==================== SKILLS 1 ====================-->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-brackets-curly skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Frontend developer</h1>
-                                <span class="skills__subtitle">More than 4 years</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">HTML</h3>
-                                    <span class="skills__number">100%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__100"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">CSS</h3>
-                                    <span class="skills__number">100%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__100"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">JavaScript</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__90"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">React</h3>
-                                    <span class="skills__number">100%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__100"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skills__flex">
-                    <!--==================== SKILLS 2 ====================-->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-server-network skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Backend developer</h1>
-                                <span class="skills__subtitle">More than 4 years</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Java</h3>
-                                    <span class="skills__number">100%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__100"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Spring Boot</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__90"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Multi-threading</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__90"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Database</h3>
-                                    <span class="skills__number">100%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__100"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">REST API</h3>
-                                    <span class="skills__number">100%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__100"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero__socials" aria-label="Social profiles">
+              <a
+                href="https://www.linkedin.com/in/rohanchinchkar/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                ><i class="uil uil-linkedin-alt" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://github.com/RohanAC09/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                ><i class="uil uil-github-alt" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://leetcode.com/u/rohan_rc09/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LeetCode"
+                ><i class="uil uil-brackets-curly" aria-hidden="true"></i
+              ></a>
             </div>
-        </section>
-
-        <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section">
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle"></span>
-
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class="qualification__button button--flex qualification__active" data-target="#education">
-                        <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Education
-                    </div>
-
-                    <div class="qualification__button button--flex" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
-                    </div>
-                </div>
-
-                <div class="qualification__sections">
-                    <!--==================== QUALIFICATION CONTENT 1 ====================-->
-                    <div class="qualification__content qualification__active" data-content id="education">
-                        <!--==================== EDUCATION 1 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">IIT Guwahati</h3>
-                                <span class="qualification__subtitle">Master of Technology</span>
-                                <p class="qualification__cgpa">CGPA: 8.89/10</p>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2020 - 2022
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--==================== EDUCATION 2 ====================-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">PCCOE Pune</h3>
-                                <span class="qualification__subtitle">Bachelor of Engineering</span>
-                                <p class="qualification__cgpa">CGPA: 8.08/10</p>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2015 - 2019
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--==================== EDUCATION 3 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">KBP College</h3>
-                                <span class="qualification__subtitle">Higher Secondary</span>
-                                <p class="qualification__cgpa">Percentage: 80.15%</p>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2013 - 2015
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--==================== EDUCATION 4 ====================-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">DHK Prashala</h3>
-                                <span class="qualification__subtitle">Senior Secondary</span>
-                                <p class="qualification__cgpa">Percentage: 91.60%</p>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2008 - 2013
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== QUALIFICATION CONTENT 2 ====================-->
-                    <div class="qualification__content" data-content id="work">
-                        <!--==================== WORK 1 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Software Engineer</h3>
-                                <span class="qualification__subtitle">LTM - Pune</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2022 - Present
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--==================== WORK 2 ====================-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Teaching Assistant</h3>
-                                <span class="qualification__subtitle">IIT Guwahati</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2020 - 2022
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--==================== WORK 3 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Project Intern</h3>
-                                <span class="qualification__subtitle">Greaves Cotton Limited</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2018 - 2019
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="hero__visual reveal">
+            <div class="hero__portrait-frame">
+              <img
+                src="./assets/img/rohan_front.jpg"
+                alt="Rohan Chinchkar"
+                class="hero__portrait"
+              />
+              <span class="portrait-tag portrait-tag--top">Pune, India</span>
+              <span class="portrait-tag portrait-tag--bottom"
+                >04+ years building</span
+              >
             </div>
-        </section>
+            <p class="hero__code" aria-hidden="true">
+              build(); learn(); repeat();
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!--==================== SERVICES ====================-->
-        <!-- <section class="services section" id="services">
+      <section class="section experience" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-index">01 / EXPERIENCE</p>
+            <h2>Engineering work that<br /><em>holds up.</em></h2>
+          </div>
+          <div class="experience__list">
+            <article class="experience__item reveal">
+              <p class="experience__period">2022 - PRESENT</p>
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="experience__company">LTIMindtree · Pune</p>
+              </div>
+              <p class="experience__description">
+                Designing scalable microservices and event-driven workflows with
+                Java, Spring Boot, Kafka, Redis, and React. Building
+                fault-tolerant services, improving system observability, and
+                shipping features across the full product stack.
+              </p>
+              <span class="experience__number">01</span>
+            </article>
+            <article class="experience__item reveal">
+              <p class="experience__period">2020 - 2022</p>
+              <div>
+                <h3>Teaching Assistant</h3>
+                <p class="experience__company">IIT Guwahati</p>
+              </div>
+              <p class="experience__description">
+                Supported undergraduate labs and coursework, mentored students
+                through complex technical concepts, and evaluated practical
+                assignments with clear, actionable feedback.
+              </p>
+              <span class="experience__number">02</span>
+            </article>
+            <article class="experience__item reveal">
+              <p class="experience__period">2018 - 2019</p>
+              <div>
+                <h3>Project Intern</h3>
+                <p class="experience__company">Greaves Cotton Limited</p>
+              </div>
+              <p class="experience__description">
+                Worked with an engineering team on an industry project,
+                translating operational requirements into a practical technical
+                solution and documenting outcomes for stakeholders.
+              </p>
+              <span class="experience__number">03</span>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        </section> -->
-
-        <!--==================== PORTFOLIO ====================-->
-        <!-- <section class="portfolio section" id="portfolio">
-
-        </section> -->
-
-        <!--==================== PROJECT IN MIND ====================-->
-        <!-- <section class="project section">
-
-        </section> -->
-
-        <!--==================== TESTIMONIAL ====================-->
-        <!-- <section class="testimonial section">
-
-        </section> -->
-
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle"></span>
-
-            <div class="contact__container container grid">
-                <!-- <div> -->
-                    <div class="contact__information">
-                        <i class="uil uil-phone contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">+91-7972405608</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">chinchkarrohan97@gmail.com</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contact__subtitle">Pune, India</span>
-                        </div>
-                    </div>
-                <!-- </div> -->
-
-                <!-- <form action="" class="contact__form grid">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
-                        </div>
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
-                        </div>
-                    </div>
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Project</label>
-                        <input type="text" class="contact__input">
-                    </div>
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
-                    </div>
-
-                    <div>
-                        <a href="#" class="button button--flex">
-                            Send Message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </form> -->
+      <section class="section projects" id="projects">
+        <div class="container">
+          <div class="projects__heading reveal">
+            <div class="section-heading section-heading--compact">
+              <p class="section-index">02 / SELECTED PROJECTS</p>
+              <h2>Built with intent.</h2>
             </div>
-        </section>
+            <div class="project-controls" aria-label="Project navigation">
+              <button
+                class="arrow-button"
+                id="project-prev"
+                type="button"
+                aria-label="Previous project"
+              >
+                <i class="uil uil-arrow-left" aria-hidden="true"></i></button
+              ><button
+                class="arrow-button"
+                id="project-next"
+                type="button"
+                aria-label="Next project"
+              >
+                <i class="uil uil-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="project-viewport reveal" id="project-viewport">
+          <div class="project-track" id="project-track">
+            <article class="project-card">
+              <div
+                class="project-card__visual project-card__visual--events"
+                aria-label="Event processing architecture illustration"
+              >
+                <div class="event-node">API</div>
+                <div class="event-stream">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="event-node event-node--core">KAFKA</div>
+                <div class="event-stream">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="event-node">DB</div>
+              </div>
+              <div class="project-card__body">
+                <div>
+                  <p class="project-card__type">DISTRIBUTED SYSTEMS</p>
+                  <h3>Real-time Event Platform</h3>
+                </div>
+                <p>
+                  A resilient event-processing system with asynchronous
+                  workflows, retries, and service-level observability.
+                </p>
+                <ul class="tag-list">
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>Kafka</li>
+                  <li>Redis</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card">
+              <div
+                class="project-card__visual project-card__visual--dashboard"
+                aria-label="Analytics dashboard illustration"
+              >
+                <div class="mock-window">
+                  <span></span><span></span><span></span>
+                  <div class="mock-chart">
+                    <i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="mock-lines"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <div>
+                  <p class="project-card__type">FULL STACK</p>
+                  <h3>Operations Intelligence</h3>
+                </div>
+                <p>
+                  A responsive monitoring workspace that turns live service
+                  signals into clear operational decisions.
+                </p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>REST API</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card">
+              <div
+                class="project-card__visual project-card__visual--research"
+                aria-label="Neural network research illustration"
+              >
+                <div class="neural-grid" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span
+                  ><span></span><span></span><span></span><span></span
+                  ><span></span>
+                </div>
+                <p>01<br />10<br />01</p>
+              </div>
+              <div class="project-card__body">
+                <div>
+                  <p class="project-card__type">DEEP LEARNING</p>
+                  <h3>Computer Vision Research</h3>
+                </div>
+                <p>
+                  Published academic work exploring deep-learning methods and
+                  rigorous model evaluation for visual data.
+                </p>
+                <ul class="tag-list">
+                  <li>Python</li>
+                  <li>Deep Learning</li>
+                  <li>Research</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card">
+              <div
+                class="project-card__visual project-card__visual--code"
+                aria-label="Problem solving terminal illustration"
+              >
+                <pre><code>solve(problem) {
+  while (!optimal) {
+    analyze();
+    improve();
+  }
+}</code></pre>
+              </div>
+              <div class="project-card__body">
+                <div>
+                  <p class="project-card__type">ALGORITHMS</p>
+                  <h3>500+ Problem Archive</h3>
+                </div>
+                <p>
+                  A growing collection of data-structure and algorithm solutions
+                  focused on clarity and performance.
+                </p>
+                <ul class="tag-list">
+                  <li>Java</li>
+                  <li>DSA</li>
+                  <li>LeetCode</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="container project-progress">
+          <span id="project-progress"></span>
+        </div>
+      </section>
 
+      <section class="section education" id="education">
+        <div class="container education__layout">
+          <div class="section-heading reveal">
+            <p class="section-index">03 / EDUCATION</p>
+            <h2>Strong foundations,<br /><em>constant curiosity.</em></h2>
+          </div>
+          <div class="education__list">
+            <article class="education__item reveal">
+              <p class="education__year">2020 - 2022</p>
+              <h3>Indian Institute of Technology Guwahati</h3>
+              <p>Master of Technology</p>
+              <strong>CGPA 8.89 / 10</strong>
+            </article>
+            <article class="education__item reveal">
+              <p class="education__year">2015 - 2019</p>
+              <h3>Pimpri Chinchwad College of Engineering</h3>
+              <p>Bachelor of Engineering</p>
+              <strong>CGPA 8.08 / 10</strong>
+            </article>
+            <article class="education__item reveal">
+              <p class="education__year">2013 - 2015</p>
+              <h3>KBP College</h3>
+              <p>Higher Secondary Education</p>
+              <strong>80.15%</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-index">04 / SKILLS</p>
+            <h2>Two ways to tell<br /><em>the same story.</em></h2>
+            <p class="section-note">
+              Both skill presentations are included so you can keep the one that
+              fits your style.
+            </p>
+          </div>
+          <div class="skills-option reveal">
+            <div class="option-label">
+              <span>OPTION A</span>
+              <p>Domain cards</p>
+            </div>
+            <div class="domain-grid">
+              <article class="domain-card">
+                <i class="uil uil-server-network" aria-hidden="true"></i>
+                <h3>Backend Engineering</h3>
+                <p>
+                  Java · Spring Boot · REST APIs · Multithreading ·
+                  Microservices
+                </p>
+                <span>01</span>
+              </article>
+              <article class="domain-card">
+                <i class="uil uil-window" aria-hidden="true"></i>
+                <h3>Frontend Systems</h3>
+                <p>React · JavaScript · HTML · CSS · Responsive UI</p>
+                <span>02</span>
+              </article>
+              <article class="domain-card">
+                <i class="uil uil-database" aria-hidden="true"></i>
+                <h3>Data & Messaging</h3>
+                <p>PostgreSQL · Redis · Kafka · Event-driven Architecture</p>
+                <span>03</span>
+              </article>
+              <article class="domain-card">
+                <i class="uil uil-cloud-computing" aria-hidden="true"></i>
+                <h3>Engineering Practice</h3>
+                <p>System Design · Git · Testing · Observability · CI/CD</p>
+                <span>04</span>
+              </article>
+            </div>
+          </div>
+          <div class="skills-option skills-option--stack reveal">
+            <div class="option-label">
+              <span>OPTION B</span>
+              <p>Capability map</p>
+            </div>
+            <div class="skill-map">
+              <div class="skill-map__row">
+                <p>CORE</p>
+                <div>
+                  <span>Java</span><span>Spring Boot</span
+                  ><span>System Design</span><span>REST</span>
+                </div>
+              </div>
+              <div class="skill-map__row">
+                <p>WEB</p>
+                <div>
+                  <span>React</span><span>JavaScript</span
+                  ><span>HTML / CSS</span><span>Responsive UI</span>
+                </div>
+              </div>
+              <div class="skill-map__row">
+                <p>DATA</p>
+                <div>
+                  <span>Kafka</span><span>Redis</span><span>SQL</span
+                  ><span>PostgreSQL</span>
+                </div>
+              </div>
+              <div class="skill-map__row">
+                <p>WAYS OF WORKING</p>
+                <div>
+                  <span>Problem Solving</span><span>Research</span
+                  ><span>Mentoring</span><span>Agile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section achievements" id="achievements">
+        <div class="container">
+          <div class="section-heading section-heading--compact reveal">
+            <p class="section-index">05 / ACHIEVEMENTS</p>
+            <h2>A few proud markers.</h2>
+          </div>
+          <div class="achievement-grid">
+            <article class="achievement reveal">
+              <span class="achievement__value">500+</span>
+              <h3>Problems solved</h3>
+              <p>
+                Consistent algorithmic practice across data structures,
+                patterns, and optimization.
+              </p>
+            </article>
+            <article class="achievement achievement--dark reveal">
+              <span class="achievement__value">01</span>
+              <h3>Research paper</h3>
+              <p>
+                Published work in deep learning, shaped by experimentation and
+                academic rigor.
+              </p>
+            </article>
+            <article class="achievement reveal">
+              <span class="achievement__value">8.89</span>
+              <h3>Postgraduate CGPA</h3>
+              <p>
+                Completed an M.Tech at IIT Guwahati with a strong academic
+                record.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section beyond" id="beyond">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-index">06 / BEYOND THE DESK</p>
+            <h2>Competitive spirit.<br /><em>Creative eye.</em></h2>
+          </div>
+          <div class="photo-grid reveal">
+            <figure class="photo-card photo-card--large">
+              <img
+                src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1200&q=85"
+                alt="Badminton player competing on an indoor court"
+                loading="lazy"
+              />
+              <figcaption>
+                <span>BADMINTON</span>
+                <p>Competition day</p>
+              </figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img
+                src="https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?auto=format&fit=crop&w=900&q=85"
+                alt="Camera used for creative photography"
+                loading="lazy"
+              />
+              <figcaption>
+                <span>PHOTOGRAPHY</span>
+                <p>Finding the frame</p>
+              </figcaption>
+            </figure>
+            <div class="beyond__copy">
+              <p>
+                Sport keeps me sharp under pressure. Photography slows me down
+                enough to notice what others miss. Both make me a better
+                engineer.
+              </p>
+              <span class="photo-note"
+                >Replace these sample images with your own competition
+                photographs.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container contact__layout">
+          <div class="contact__intro reveal">
+            <p class="section-index">07 / CONTACT</p>
+            <h2>Have a hard problem?<br /><em>Let's build.</em></h2>
+            <a class="contact__email" href="mailto:chinchkarrohan97@gmail.com"
+              >chinchkarrohan97@gmail.com
+              <i class="uil uil-arrow-up-right" aria-hidden="true"></i
+            ></a>
+          </div>
+          <div class="contact__details reveal">
+            <div>
+              <span>PHONE</span><a href="tel:+917972405608">+91 79724 05608</a>
+            </div>
+            <div>
+              <span>LOCATION</span>
+              <p>Pune, India</p>
+            </div>
+            <div>
+              <span>ELSEWHERE</span>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/rohanchinchkar/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >LinkedIn</a
+                >
+                ·
+                <a
+                  href="https://github.com/RohanAC09/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+                ·
+                <a
+                  href="https://leetcode.com/u/rohan_rc09/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >LeetCode</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!--==================== FOOTER ====================-->
     <footer class="footer">
-
+      <div class="container footer__content">
+        <a href="#home" class="nav__logo">RC<span>.</span></a>
+        <p>
+          Designed & built by Rohan Chinchkar · <span id="current-year"></span>
+        </p>
+        <a href="#home" class="footer__top" aria-label="Back to top"
+          ><i class="uil uil-arrow-up" aria-hidden="true"></i
+        ></a>
+      </div>
     </footer>
-
-    <!--==================== SCROLL TOP ====================-->
-
-
-    <!--==================== SWIPER JS ====================-->
-    <script src=""></script>
-
-    <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
